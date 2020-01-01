@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+::placeholder {
+    color: #6fa2ef;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #3370cc;
+    font-family: 'Roboto', sans-serif;
+
+    font-weight: 400;
+    color: #fff;
+}
+
+.title {
+    position: absolute;
+    /* transform: translate(-50%, -29px); */
+    font-size: 10rem;
+    font-weight: 900;
+    left: 50%;
+    top: -31px;
+    color: #002d7185;
+    animation: slideIn .8s ease-out;
+    /* transform: translateX(-50%); */
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -120%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.container {
+    width: 70%;
+    margin: 200px auto;
+    /* background-color: lightcoral; */
+    display: flex;
+    /* justify-content: space-evenly; */
+    /* animation-delay: 3s; */
+    animation: fadeIn 1s ease-out 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+
+}
+
+.lists {
+    /* background-color: #3571cb; */
+    padding: 2rem;
+}
+
+.list-title {
+    font-size: 45px;
+}
+
+.list-container {
+    margin: 2rem 0;
+    list-style: none;
+}
+
+.list-container>li {
+    font-size: 18px;
+    font-weight: 300;
+    position: relative;
+    margin-left: 18px;
+    /* margin-bottom: 7px;*/
+}
+
+.list-container .active {
+    font-weight: 500;
+}
+
+.list-container>li::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: -17px;
+    top: 6px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.lists .btn {
+    border: none;
+    background-color: unset;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.lists input[type="text"] {
+    background-color: unset;
+    border: none;
+    color: white;
+    outline: none;
+    border-bottom: 2px solid #6fa2ef;
+    padding: 1rem;
+}
+
+.list-info {
+    background-color: lightgreen;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
